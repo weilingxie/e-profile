@@ -1,33 +1,13 @@
 ﻿import React from 'react';
 
-class ErrorsComponent extends React.Component {
-    
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-
-        if(this.props.errors !== null && this.props.errors.length > 0)
-        {
-            let errors = [];
-            this.props.errors.forEach(function (error, index) {   
-                errors.push(<li  key={index}>{error}</li>);
-            });
-            return (
-                <div className="alert alert-danger" role="alert">
-                    <ul >
-                        {errors}
-                    </ul>
-                </div>
-            );
-        }
-        else
-        {
-            return (null);
-        }
-
-    }
-}
+const ErrorsComponent = (props) => (
+    (props.errors !== null && props.errors.length > 0) ?
+    (<div className="alert alert-danger" role="alert">
+        <ul >            
+            {props.errors.map((error, index)=>(<li key={index}>{error}</li>))}
+        </ul>
+    </div>) :
+    (null)
+)
 
 export default ErrorsComponent;

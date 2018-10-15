@@ -30,7 +30,7 @@ class HeaderComponent extends React.Component {
                         <div className="row">
                         <div className="navbar-header col-lg-3">
                             <Link to="/" className="navbar-left">
-                                <span><img src={BBC_Logo} height={50}></img></span>
+                                <span><img src={BBC_Logo} height={50} alt="logo"></img></span>
                             </Link>
                         </div>
                         <ul className="nav navbar-nav col-lg-3">
