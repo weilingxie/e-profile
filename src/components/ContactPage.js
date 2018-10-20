@@ -1,9 +1,8 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import { TickButtonComponent } from './elements/TickButtonComponent';
 import ErrorsComponent from './elements/ErrorsComponent';
 
-class LoginPage extends React.Component {
+class ContactPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,9 +69,6 @@ class LoginPage extends React.Component {
                                     <div className="col-md-6 col-lg-6">
                                         Keep me logged in?
                                     </div>
-                                    <div className="col-md-2 col-lg-2">
-                                        <TickButtonComponent className="btn-xs" unselectedClass="btn-default" selected={this.state.permanent} onChange={(id, value) => { this.setState({ permanent: value }); }} />
-                                    </div>
                                 </div>
                             </div>
                             <ErrorsComponent errors={this.state.errors} />
@@ -99,7 +95,7 @@ class LoginPage extends React.Component {
 }
 
 
-export default LoginPage;
+export default ContactPage;
 
 
 

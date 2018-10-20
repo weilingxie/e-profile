@@ -1,19 +1,48 @@
 
-#home-page {
-    background-image: linear-gradient(to right, white, black);
+.navbar-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: rgb(199, 199, 199);
 }
 
-#yinyang-img {
-    animation-name: ckw;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+.homepage-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .homepage-data-section {
+        background-color: white;
+    }
+    
+    .homepage-web-section {
+        background-color: black;    
+    }
+
+    .homepage-img-section {
+        //background-color: black;
+        background-image: linear-gradient(to right, white, black);
+        
+        #yinyang-img {
+            animation-name: ckw;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes ckw {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
 }
 
-@keyframes ckw {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import selectNews from '../selectors/news';
 import { connect } from 'react-redux';
 
-const NewsDetail = (props) => (
+const AboutMePage = (props) => (
     <div className="container">
         <div className="jumbotron">
         <h2 className="row">{ props.title }</h2>
@@ -16,17 +16,4 @@ const NewsDetail = (props) => (
     </div>
 );
 
-const mapStateToProps = (state, props) => {
-    console.log(props);
-    let id = props.match.params.news_id;
-     console.log("News Id::" + id);
-     console.log(state.newsList);
-    // console.log(state.newsList.newsList);
-    //console.log(selectNews(state.newsList.newsList, id)[0]);
-    
-    return {
-        ...selectNews(state.newsList, id)[0]
-    }
-};
-
-export default connect(mapStateToProps)(NewsDetail);
+export default AboutMePage;

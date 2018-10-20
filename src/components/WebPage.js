@@ -5,7 +5,7 @@ import { addNewsList } from '../actions/redux/news';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Card from './Card';
 
-class HomePage extends React.Component {
+class WebPage extends React.Component {
     constructor(props) {
         super(props);
         
@@ -81,9 +81,4 @@ class HomePage extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-    }
-};
-
-export default connect(mapStateToProps)(HomePage);
+export default WebPage;
