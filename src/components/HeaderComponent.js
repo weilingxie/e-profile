@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Config from '../Config.json';
-import BBC_Logo from '../BBC_News.svg';
+//import BBC_Logo from '../BBC_News.svg';
+import BBC_Logo from '../YinYang.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class HeaderComponent extends React.Component {

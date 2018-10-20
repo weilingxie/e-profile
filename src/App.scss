@@ -1,80 +1,19 @@
-.App {
-  text-align: center;
+
+#home-page {
+    background-image: linear-gradient(to right, white, black);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#yinyang-img {
+    animation-name: ckw;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.page{
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-}
-
-.fade-appear {
-  opacity: 0;
-  z-index: 1;  
-}
-.fade-appear.fade-appear-active{
-  opacity: 1;
-  transition: opacity 300ms linear;
-}
-
-.fade-enter {
-  opacity: 0;
-  z-index: 1;  
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 200ms linear 100ms;
-}
-
-.fade-exit{
-  opacity:1;
-}
-
-.fade-exit.fade-exit-active{
-  opacity:0;
-  transition: opacity 300ms linear;
-}
-
-.fade-exit-done{
-  opacity: 0;
-}
-
-.flex-container{
-  position:absolute;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.flex-container > div {
-  width: 700px;
-  margin: 10px;
-  text-align: center;
+@keyframes ckw {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
