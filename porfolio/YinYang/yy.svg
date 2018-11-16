@@ -1,0 +1,4 @@
+- var r = 1500;
+
+svg(viewBox=[-r, -r, 2*r, 2*r].join(' '))
+  style :root { --r: #{r} }

@@ -14,17 +14,25 @@ class Header extends React.Component {
     render() {
         return (
                 <div className="navbar-container">
-                        <Link to="/" className="navbar-logo">
-                            <span><img src={BBC_Logo} height={50} alt="logo"></img></span>
+                        <Link to="/" className="navbar-brand">
+                            <p>Weiling Xie</p>
                         </Link>
                         <ul className="navbar-buttons">
-                            <li className="active"><a href="#">Home</a></li>
-                            <li>
-                                <Link to="/home1" className="navbar-left">
-                                    Page 1
+                            <li className="active">
+                                <Link to="/" className="navbar-home">
+                                    Home
                                 </Link>
-                                </li>
-                            <li><a href="#">Page 2</a></li>
+                            </li>
+                            <li>
+                                <Link to="/aboutme" className="navbar-aboutme">
+                                    About Me
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="navbar-contact">
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>                                                
                         <div className="navbar-socialmedia">
                             <a className="navbar-fackbook" href={Config.FACKBOOK_URL}>

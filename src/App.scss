@@ -1,39 +1,79 @@
 
+
 .navbar-container {
+    height: 7vh;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     background-color: rgb(199, 199, 199);
+
+    .navbar-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+        list-style-type: none;
+    }
 }
 
-.homepage-container {
+.homepage {
+    height:93vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    background-image: linear-gradient(to right, white, black);
 
-    .homepage-data-section {
-        background-color: white;
+    &-data {
+        //background-color: white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        &__title {
+            color: black;
+            font-size:40px;
+            text-decoration: none;
+
+            &:hover {
+                transform:scale(1.5);
+                cursor: pointer;
+            }
+        }
     }
     
-    .homepage-web-section {
-        background-color: black;    
+    &-web {
+        //background-color: black;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        &__title {
+            color: white;
+            font-size:40px;
+            text-decoration: none;
+            &:hover {
+                transform:scale(1.5);
+                cursor: pointer;
+            }
+        }
     }
 
-    .homepage-img-section {
-        //background-color: black;
-        background-image: linear-gradient(to right, white, black);
-        
-        #yinyang-img {
-            animation-name: ckw;
-            animation-duration: 20s;
-            animation-iteration-count: infinite;
+    &-logo {
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        &__svg {
+            width:80%;
+            animation: ckw 15s linear infinite;
         }
         
-        @keyframes ckw {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+    }
+    
+    @keyframes ckw {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
         }
     }
 }
