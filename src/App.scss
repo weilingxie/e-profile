@@ -37,30 +37,77 @@ html,body{
 
 .App {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
-    
+    display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 7fr;
 }
 
-.navbar-container {
-    height: 7vh;
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    background-color: rgb(223, 221, 221);
+.navbar {
+    width:95%;
+    //height: 7vh;
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    // justify-content: space-evenly;
+    // grid-template-columns: repeat(3,1fr);
+    //background-color: rgba(223, 221, 221, .1);
 
-    .navbar-buttons {
+    &-brand {
+        text-align:left;
+        flex-grow: 1;
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        // justify-content: left;
+    }
+
+    &-buttons {
         display: flex;
+        flex-grow: 3;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        margin: 0;
-        list-style-type: none;
+        justify-content: center;
+
+        //margin: 0;
+        //list-style-type: none;
+        &-btn {
+            font-size: 20px;
+            margin: 10px;
+            &:hover {
+                text-decoration:none;
+                color:blueviolet;
+            }
+    
+            &-active{
+                text-decoration:none;
+                font-weight: bold;
+                color:blueviolet;
+            }
+        }
+        
+    }
+
+    &-socialmedia {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        &-item {
+            margin: 5px;
+        }
     }
 }
 
 .homepage {
-    height:93vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    //height:93vh;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    //justify-items: center;
 
     &-data {        
         //background-color: rgba(0,0,0,0.3);
