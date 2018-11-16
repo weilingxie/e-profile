@@ -1,10 +1,50 @@
+@mixin stroke($width, $color) {
+    $shadow: ();
+    @for $i from -$width through $width {
+        $shadow: append($shadow,#{$width}px #{$i}px $color, comma);
+        $shadow: append($shadow,#{-$width}px #{$i}px $color, comma);
+        $shadow: append($shadow,#{$i}px #{$width}px $color, comma);
+        $shadow: append($shadow,#{$i}px #{-$width}px $color, comma);
+    }
+    text-shadow: $shadow;
+}
 
+$web-color: rgb(236, 235, 235);
+$data-color: black;
+
+@mixin homepage-button($color,$stroke-color){
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        color: $color;
+        font-size:50px;
+        text-decoration: none;
+        @include stroke(1, $stroke-color);
+        &:hover {
+            color:$color;
+            transform:scale(1.5);
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
+
+html,body{
+    background-image: url("./images/shuimo2.jpg");
+}
+
+.App {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    
+}
 
 .navbar-container {
     height: 7vh;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(223, 221, 221);
 
     .navbar-buttons {
         display: flex;
@@ -19,48 +59,25 @@
 .homepage {
     height:93vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-    background-image: linear-gradient(to right, white, black);
 
-    &-data {
-        //background-color: white;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        &__title {
-            color: black;
-            font-size:40px;
-            text-decoration: none;
-
-            &:hover {
-                transform:scale(1.5);
-                cursor: pointer;
-            }
-        }
+    &-data {        
+        //background-color: rgba(0,0,0,0.3);
+        @include homepage-button($data-color,$web-color);
     }
     
     &-web {
-        //background-color: black;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        &__title {
-            color: white;
-            font-size:40px;
-            text-decoration: none;
-            &:hover {
-                transform:scale(1.5);
-                cursor: pointer;
-            }
-        }
+        //background-color: rgba(180, 179, 179, 0.3);
+        @include homepage-button($web-color,$data-color);
     }
 
     &-logo {
-        width:100%;
+        width:80%;
         display:flex;
         justify-content: center;
         align-items:center;
+        opacity:1;
         &__svg {
             width:80%;
             animation: ckw 15s linear infinite;
@@ -77,9 +94,6 @@
         }
     }
 }
-
-
-
 
 
 

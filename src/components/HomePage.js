@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import YinYang from '../YinYang.svg';
+import YinYang from '../images/YinYang.svg';
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ class HomePage extends React.Component {
                     <img className="homepage-logo__svg" src={YinYang}  alt="YinYang" />   
                 </div>                             
                 <div className="homepage-web">
-                    <h2 className="homepage-web__title" >Web</h2>
+                    <Link to="/data" className="homepage-web__title">Web</Link>
                 </div>
             </div>
         );
